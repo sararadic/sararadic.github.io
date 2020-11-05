@@ -1,0 +1,156 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.gallery-highlight{
+    width: 80%;
+    height: 65%;
+}
+
+section{
+    display:flex;
+    height: 100vh;
+}
+
+.gallery{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.description{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #cc6600;
+}
+
+.description h1{
+    animation: textanimation 1s ease-in-out;
+    font-weight: bold;
+    font-family: 'Dancing Script', cursive;
+}
+
+.description p{
+    font-size: 15px;
+    text-align: center;
+    color: white;
+    animation: textanimation2 0.5s ease-in-out;
+    font-family: 'Architects Daughter', cursive;
+}
+
+@keyframes textanimation {
+    0% {
+        letter-spacing: 20px;
+    }
+    100% {
+        letter-spacing: 1px;
+    }
+}
+
+@keyframes textanimation2 {
+    0% {
+        transform: scale(0);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.preview{
+    display: flex;
+    width: 80%;
+    border: 2px solid #cc6600;
+}
+
+.preview img{
+    height: 150px;
+    flex-grow: 1;
+    opacity: 0.6;
+    cursor: pointer;  
+    transition: opacity 0.3s ease; 
+}
+
+img.autumn-active{
+    opacity: 1;
+}
+
+button {
+    background: none;
+    color: #ccc;
+    width: 240px;
+    height: 80px;
+    border: 1px solid #8a6219;
+    font-size: 18px;
+    border-radius: 4px;
+    transition: .6s;
+    overflow: hidden;
+    margin-top: 10px;
+   }
+   
+   button:focus {
+    outline: none;
+   }
+   
+   button:before {
+       content: '';
+       display: block;
+       position: absolute;
+       background: rgb(255, 255, 255);
+       width: 60px;
+       height: 100%;
+       left: 0;
+       top: 0;
+       opacity: .5;
+       filter: blur(30px);
+       transform: translateX(-130px) skewX(-15deg);
+   }
+   
+   button:after {
+       content: '';
+       display: block;
+       position: absolute;
+       background: rgb(255, 255, 255);
+       width: 30px;
+       height: 100%;
+       left: 30px;
+       top: 0;
+       opacity: 0;
+       filter: blur(30px);
+       transform: translateX(-100px) scaleX(-15deg);
+   }
+   
+   button:hover {
+      background: #8a6219;
+      cursor: pointer;
+   }
+   
+   button:hover:before {
+    transform: translateX(300px) skewX(-15deg);
+    opacity: .6;
+    transition: .7s;
+   }
+   
+   button:hover:after {
+    transform: translateX(300px) skewX(-15deg);
+    opacity: 1;
+    transition: .7s;
+   }
+
+   .spotify{
+      margin-left: 40%;
+      margin-top: 10%;
+   }
+
+   .background{
+    padding-bottom: 7.6%;
+    align-items: center;
+    background-color: #cc6600;
+
+   }
